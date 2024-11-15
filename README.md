@@ -258,7 +258,7 @@ iface eth1 inet static
     address 10.74.12.1
     netmask 255.255.254.0
 
-# A4 > HoloPromise
+# A4 > HoloPromise > Project-Hope/Holo-Council
 auto eth2
 iface eth2 inet static
     address 10.74.19.49
@@ -268,56 +268,140 @@ iface eth2 inet static
 ### Gura_Ame_Ina (309 Hosts)
 
 ```bash
+# A3 > Holo-Myth
+auto eth0
+iface eth0 inet static
+    address 10.74.12.2
+    netmask 255.255.254.0
+    gateway 10.74.12.1
 ```
 
 ### Kiara_Calli (193 Hosts)
 
 ```bash
+# A3 > Holo-Myth
+auto eth0
+iface eth0 inet static
+    address 10.74.12.312
+    netmask 255.255.254.0
+    gateway 10.74.12.1
 ```
 
 ### Project-Hope
 
 ```bash
+# A4 > Holo-Myth
+auto eth0
+iface eth0 inet static
+    address 10.74.19.50
+    netmask 255.255.255.248
+    gateway 10.74.19.49
+
+# A5 > Irys
+auto eth1
+iface eth1 inet static
+    address 10.74.19.57
+    netmask 255.255.255.248
 ```
 
 ### Irys (2 Hosts)
 
 ```bash
+# A5 > Project-Hope
+auto eth0
+iface eth0 inet static
+    address 10.74.19.58
+    netmask 255.255.255.248
+    gateway 10.74.19.57
 ```
 
 ### Holo-Council
 
 ```bash
+# A4 > Holo-Myth
+auto eth0
+iface eth0 inet static
+    address 10.74.19.51
+    netmask 255.255.255.248
+    gateway 10.74.19.49
+
+# A6 > Switch4
+auto eth1
+iface eth1 inet static
+    address 10.74.18.128
+    netmask 255.255.255.192
 ```
 
 ### Kronii-Mumei (39 Hosts)
 
 ```bash
+# A6 > Holo-Council
+auto eth0
+iface eth0 inet static
+    address 10.74.18.129
+    netmask 255.255.255.192
+    gateway 10.74.18.128
 ```
 
 ### Bae_Fauna (22 Hosts)
 
 ```bash
+# A6 > Holo-Council
+auto eth0
+iface eth0 inet static
+    address 10.74.18.168
+    netmask 255.255.255.192
+    gateway 10.74.18.128
 ```
 
 ### HoloAdvent
 
 ```bash
+# A7 > Holo-EN
+auto eth0
+iface eth0 inet static
+    address 10.74.19.82
+    netmask 255.255.255.252
+    gateway 10.74.19.81
+
+# A8 > Switch (FuwaMoco/Shiori/Biboo)
+auto eth1
+iface eth1 inet static
+    address 10.74.19.1
+    netmask 255.255.255.224
 ```
 
 ### FuwaMoco (5 Hosts)
 
 ```bash
+# A8 > HoloAdvent
+auto eth0
+iface eth0 inet static
+    address 10.74.19.2
+    netmask 255.255.255.224
+    gateway 10.74.19.1
 ```
 
 ### Shiori_Nerissa (12 Hosts)
 
 ```bash
+# A8 > HoloAdvent
+auto eth0
+iface eth0 inet static
+    address 10.74.19.7
+    netmask 255.255.255.224
+    gateway 10.74.19.1
 ```
 
 ### Biboo (10 Hosts)
 
 ```bash
+# A8 > HoloAdvent
+auto eth0
+iface eth0 inet static
+    address 10.74.19.18
+    netmask 255.255.255.224
+    gateway 10.74.19.1
 ```
 
 ### HoloID
