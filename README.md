@@ -46,14 +46,13 @@
     - [Kobo (146 Hosts)](#kobo-146-hosts)
     - [Holo-JP](#holo-jp)
     - [DEV\_IS](#dev_is)
-    - [Re:GLOSS](#regloss)
     - [Ririka\_Raden (3 Host)](#ririka_raden-3-host)
     - [Ao (3 Hosts)](#ao-3-hosts)
     - [Hajime\_Kanade (7 Hosts)](#hajime_kanade-7-hosts)
     - [GEN:0](#gen0)
+    - [GEN:1](#gen1)
     - [MiComet (1501 Hosts)](#micomet-1501-hosts)
     - [Sora\_Robo\_AZKi (542 Hosts)](#sora_robo_azki-542-hosts)
-    - [GEN:1](#gen1)
     - [FBK\_Matsuri (321 Hosts)](#fbk_matsuri-321-hosts)
     - [Aki\_Haachama (148 Hosts)](#aki_haachama-148-hosts)
     - [GAMERS](#gamers)
@@ -61,13 +60,17 @@
     - [Okayu (32 Hosts)](#okayu-32-hosts)
     - [Mio (36 Hosts)](#mio-36-hosts)
   - [Routing](#routing)
+    - [Hololive](#hololive-1)
+    - [Hololive \> EN (Left)](#hololive--en-left)
+    - [Hololive \> ID (Right)](#hololive--id-right)
+    - [Hololive \> JP (Down)](#hololive--jp-down)
   - [Testing](#testing)
 - [CIDR](#cidr)
   - [Penggabungan IP](#penggabungan-ip)
   - [CIDR Tree](#cidr-tree)
   - [Pembagian IP](#pembagian-ip-1)
   - [Konfigurasi](#konfigurasi-1)
-    - [Hololive](#hololive-1)
+    - [Hololive](#hololive-2)
     - [Holo-EN](#holo-en-1)
     - [Holo-Myth](#holo-myth-1)
     - [Gura\_Ame\_Ina (309 Hosts)](#gura_ame_ina-309-hosts-1)
@@ -96,7 +99,7 @@
     - [Kobo (146 Hosts)](#kobo-146-hosts-1)
     - [Holo-JP](#holo-jp-1)
     - [DEV\_IS](#dev_is-1)
-    - [Re:GLOSS](#regloss-1)
+    - [Re:GLOSS](#regloss)
     - [Ririka\_Raden (3 Host)](#ririka_raden-3-host-1)
     - [Ao (3 Hosts)](#ao-3-hosts-1)
     - [Hajime\_Kanade (7 Hosts)](#hajime_kanade-7-hosts-1)
@@ -134,26 +137,26 @@
 |-------------|------|-----------|---------|
 | A1          | Hololive > HoloEN | 2         | /30     |
 | A2          | Hololive > HoloEN > Holo-Myth | 2         | /30     |
-| A3          | Hololive > HoloEN > Holo-Myth > Switch2 > Gur-ame-ina / Calli-ara | 503       | /23     |
+| A3          | Hololive > HoloEN > Holo-Myth > Switch > Gur-ame-ina / Calli-ara | 503       | /23     |
 | A4          | Hololive > HoloEN > Holo-Myth > HoloPromise > Project-Hope / Holo-Council | 3         | /29     |
 | A5          | Hololive > HoloEN > Holo-Myth > HoloPromise > Project-Hope > Irys | 3         | /29     |
-| A6          | Hololive > HoloEN > Holo-Myth > HoloPromise > Holo-Council > Switch4 > Kronii / Fauna | 62        | /26     |
+| A6          | Hololive > HoloEN > Holo-Myth > HoloPromise > Holo-Council > Switch > Kronii / Fauna | 62        | /26     |
 | A7          | Hololive > HoloEN > HoloAdvent | 2         | /30     |
 | A8          | Hololive > HoloEN > HoloAdvent > Switch > Fuwa / Shiori / Biboo | 28        | /27     |
 | A9          | Hololive > HoloID | 2         | /30     |
 | A10         | Hololive > HoloID > Area15 | 2         | /30     |
-| A11         | Hololive > HoloID > Area15 > Switch6 > Moona / Risu / Iofi | 661       | /22     |
+| A11         | Hololive > HoloID > Area15 > Switch > Moona / Risu / Iofi | 661       | /22     |
 | A12         | Hololive > HoloID > holoro | 2         | /30     |
-| A13         | Hololive > HoloID > holoro > Switch7 > Ollie / Anya / Reine | 34        | /26     |
+| A13         | Hololive > HoloID > holoro > Switch > Ollie / Anya / Reine | 34        | /26     |
 | A14         | Hololive > HoloID > holoh3ro | 2         | /30     |
-| A15         | Hololive > HoloID > holoh3ro > Switch8 > Zeta / Kaela / Kobo | 299       | /23     |
+| A15         | Hololive > HoloID > holoh3ro > Switch > Zeta / Kaela / Kobo | 299       | /23     |
 | A16         | Hololive > HoloJP | 2         | /30     |
-| A17         | Hololive > HoloJP > Switch1 > DEV_IS / GEN:0 | 3         | /29     |
-| A18         | Hololive > HoloJP > Switch1 > DEV_IS > Re:GLOSS > Ririka / Ao / Kanade | 14        | /28     |
-| A19         | Hololive > HoloJP > Switch1 > GEN:0 > Switch 3 > MiComet / AZKi / GEN:1 | 2045      | /21     |
-| A20         | Hololive > HoloJP > Switch1 > GEN:0 > Switch 3 > GEN:1 > Member > Matsuri / Haachama | 470       | /23     |
-| A21         | Hololive > HoloJP > Switch1 > GEN:0 > Switch 3 > GEN:1 > GAMERS | 2         | /30     |
-| A22         | Hololive > HoloJP > Switch1 > GEN:0 > Switch 3 > GEN:1 > GAMERS > Fubuki > Korone / Okayu / Mio | 120       | /25     |
+| A17         | Hololive > HoloJP > Switch > DEV_IS / GEN:0 | 3         | /29     |
+| A18         | Hololive > HoloJP > Switch > DEV_IS > Re:GLOSS > Ririka / Ao / Kanade | 14        | /28     |
+| A19         | Hololive > HoloJP > Switch > GEN:0 > Switch > MiComet / AZKi / GEN:1 | 2045      | /21     |
+| A20         | Hololive > HoloJP > Switch > GEN:0 > Switch > GEN:1 > Member > Matsuri / Haachama | 470       | /23     |
+| A21         | Hololive > HoloJP > Switch > GEN:0 > Switch > GEN:1 > GAMERS | 2         | /30     |
+| A22         | Hololive > HoloJP > Switch > GEN:0 > Switch > GEN:1 > GAMERS > Fubuki > Korone / Okayu / Mio | 120       | /25     |
 | **Total**   |                      | **4263**  | **/19** |
 
 # VLSM
@@ -190,6 +193,8 @@
 | A22    | 10.74.18.0  | 255.255.255.128  | 10.74.18.127 | 10.74.18.1 - 10.74.18.127    |
 
 ## Konfigurasi
+
+> NOTE: Cara menghitung IP yang hostnya banyak: {Hosts} % 256 -> sesuaikan IP
 
 ### Hololive
 
@@ -252,7 +257,7 @@ iface eth0 inet static
     netmask 255.255.255.252
     gateway 10.74.19.77
 
-# A3 > Switch2 (Gura/Kiara)
+# A3 > Switch (Gura/Kiara)
 auto eth1
 iface eth1 inet static
     address 10.74.12.1
@@ -282,7 +287,7 @@ iface eth0 inet static
 # A3 > Holo-Myth
 auto eth0
 iface eth0 inet static
-    address 10.74.12.312
+    address 10.74.13.55
     netmask 255.255.254.0
     gateway 10.74.12.1
 ```
@@ -325,7 +330,7 @@ iface eth0 inet static
     netmask 255.255.255.248
     gateway 10.74.19.49
 
-# A6 > Switch4
+# A6 > Switch
 auto eth1
 iface eth1 inet static
     address 10.74.18.128
@@ -407,155 +412,469 @@ iface eth0 inet static
 ### HoloID
 
 ```bash
+# A9 > Hololive
+auto eth0
+iface eth0 inet static
+    address 10.74.19.86
+    netmask 255.255.255.252
+    gateway 10.74.19.85
+
+# A10 > Area15
+auto eth1
+iface eth1 inet static
+    address 10.74.19.89
+    netmask 255.255.255.252
+
+# A12 > holoro
+auto eth2
+iface eth2 inet static
+    address 10.74.19.93
+    netmask 255.255.255.252
+
+# A14 > holoh3ro
+auto eth3
+iface eth3 inet static
+    address 10.74.19.97
+    netmask 255.255.255.252
 ```
 
 ### Area15
 
 ```bash
+# A10 > Holo-ID
+auto eth0
+iface eth0 inet static
+    address 10.74.19.90
+    netmask 255.255.252.252
+    gateway 10.74.19.89
+
+# A11 > Switch (Moona / Risu / Iofi)
+auto eth1
+iface eth1 inet static
+    address 10.74.8.1
+    netmask 255.255.252.0
 ```
 
 ### Moona (201 Hosts)
 
 ```bash
+# A11 > Area15
+auto eth0
+iface eth0 inet static
+    address 10.74.8.2
+    netmask 255.255.252.0
+    gateway 10.74.8.1
 ```
 
 ### Risu (319 Hosts)
 
 ```bash
+# A11 > Area15
+auto eth0
+iface eth0 inet static
+    address 10.74.8.203
+    netmask 255.255.252.0
+    gateway 10.74.8.1
 ```
 
 ### Iofi (140 Hosts)
 
 ```bash
+# A11 > Area15
+auto eth0
+iface eth0 inet static
+    address 10.74.10.10
+    netmask 255.255.252.0
+    gateway 10.74.8.1
 ```
 
 ### holoro
 
 ```bash
+# A12 > HoloID
+auto eth0
+iface eth0 inet static
+    address 10.74.19.94
+    netmask 255.255.255.252
+    gateway 10.74.19.93
+
+# A13 > Switch (Ollie/Anya/Reine)
+auto eth1
+iface eth1 inet static
+    address 10.74.18.192
+    netmask 255.255.255.192
 ```
 
 ### Ollie (20 Hosts)
 
 ```bash
+# A13 > holoro
+auto eth0
+iface eth0 inet static
+    address 10.74.18.193
+    netmask 255.255.255.192
+    gateway 10.74.18.192
 ```
 
 ### Anya (3 Hosts)
 
 ```bash
+# A13 > holoro
+auto eth0
+iface eth0 inet static
+    address 10.74.18.213
+    netmask 255.255.255.192
+    gateway 10.74.18.192
 ```
 
 ### Reine (10 Hosts)
 
 ```bash
+# A13 > holoro
+auto eth0
+iface eth0 inet static
+    address 10.74.18.216
+    netmask 255.255.255.192
+    gateway 10.74.18.192
 ```
 
 ### holoh3ro
 
 ```bash
+# A14 > HoloID
+auto eth0
+iface eth0 inet static
+    address 10.74.19.98
+    netmask 255.255.255.252
+    gateway 10.74.19.97
+
+# A15 > Switch (Zeta/Kaela/Kobo)
+auto eth1
+iface eth1 inet static
+    address 10.74.14.1
+    netmask 255.255.254.0
 ```
 
 ### Zeta (81 Hosts)
 
 ```bash
+# A15 > holoh3ro
+auto eth0
+iface eth0 inet static
+    address 10.74.14.2
+    netmask 255.255.254.0
+    gateway 10.74.14.1
 ```
 
 ### Kaela (71 Hosts)
 
 ```bash
+# A15 > holoh3ro
+auto eth0
+iface eth0 inet static
+    address 10.74.14.83
+    netmask 255.255.254.0
+    gateway 10.74.14.1
 ```
 
 ### Kobo (146 Hosts)
 
 ```bash
+# A15 > holoh3ro
+auto eth0
+iface eth0 inet static
+    address 10.74.14.154
+    netmask 255.255.254.0
+    gateway 10.74.14.1
 ```
 
 ### Holo-JP
 
 ```bash
+# A16 > Hololive
+auto eth0
+iface eth0 inet static
+    address 10.74.19.102
+    netmask 255.255.255.252
+    gateway 10.74.19.101
+
+# A17 > Switch > DEV:IS / GEN:0
+auto eth1
+iface eth1 inet static
+    address 10.74.19.65
+    netmask 255.255.255.248
 ```
 
 ### DEV_IS
 
 ```bash
-```
+# A17 > Holo-JP
+auto eth0
+iface eth0 inet static
+    address 10.74.19.66
+    netmask 255.255.255.248
+    gateway 10.74.19.65
 
-### Re:GLOSS
-
-```bash
+# A18 > Re:GLOSS
+auto eth1
+iface eth1 inet static
+    address 10.74.19.33
+    netmask 255.255.255.240
 ```
 
 ### Ririka_Raden (3 Host)
 
 ```bash
+# A18 > Re:GLOSS
+auto eth0
+iface eth0 inet static
+    address 10.74.19.34
+    netmask 255.255.255.240
+    gateway 10.74.19.33
 ```
 
 ### Ao (3 Hosts)
 
 ```bash
+# A18 > Re:GLOSS
+auto eth0
+iface eth0 inet static
+    address 10.74.19.37
+    netmask 255.255.255.240
+    gateway 10.74.19.33
 ```
 
 ### Hajime_Kanade (7 Hosts)
 
 ```bash
+# A18 > Re:GLOSS
+auto eth0
+iface eth0 inet static
+    address 10.74.19.40
+    netmask 255.255.255.240
+    gateway 10.74.19.33
 ```
 
 ### GEN:0
 
 ```bash
-```
+# A17 > Holo-JP
+auto eth0
+iface eth0 inet static
+    address 10.74.19.67
+    netmask 255.255.255.248
+    gateway 10.74.19.65
 
-### MiComet (1501 Hosts)
-
-```bash
-```
-
-### Sora_Robo_AZKi (542 Hosts)
-
-```bash
+# A19 > Switch > MiComet / AZKi / GEN:1
+auto eth1
+iface eth1 inet static
+    address 10.74.0.1
+    netmask 255.255.248.0
 ```
 
 ### GEN:1
 
 ```bash
+# A19 > GEN:0
+auto eth0
+iface eth0 inet static
+    address 10.74.0.2
+    netmask 255.255.248.0
+    gateway 10.74.0.1
+
+# A20 > FBK / Aki
+auto eth1
+iface eth1 inet static
+    address 10.74.16.1
+    netmask 255.255.254.0
+
+# A21 > GAMERS
+auto eth2
+iface eth2 inet static
+    address 10.74.19.105
+    netmask 255.255.255.252
+```
+
+### MiComet (1501 Hosts)
+
+```bash
+# A19 > GEN:0
+auto eth0
+iface eth0 inet static
+    address 10.74.0.3
+    netmask 255.255.248.0
+    gateway 10.74.0.1
+```
+
+### Sora_Robo_AZKi (542 Hosts)
+
+```bash
+# A19 > GEN:0
+auto eth0
+iface eth0 inet static
+    address 10.74.5.224
+    netmask 255.255.248.0
+    gateway 10.74.0.1
 ```
 
 ### FBK_Matsuri (321 Hosts)
 
 ```bash
+# A20 > GEN:1
+auto eth0
+iface eth0 inet static
+    address 10.74.16.2
+    netmask 255.255.254.0
+    gateway 10.74.16.1
 ```
 
 ### Aki_Haachama (148 Hosts)
 
 ```bash
+# A20 > GEN:1
+auto eth0
+iface eth0 inet static
+    address 10.74.17.67
+    netmask 255.255.254.0
+    gateway 10.74.16.1
 ```
 
 ### GAMERS
 
 ```bash
+# A21 > GEN:1
+auto eth0
+iface eth0 inet static
+    address 10.74.19.106
+    netmask 255.255.255.252
+    gateway 10.74.19.105
+
+# A22 > Korone / Okayu / Mio
+auto eth1
+iface eth1 inet static
+    address 10.74.18.1
+    netmask 255.255.255.128
 ```
 
 ### Korone (51 Hosts)
 
 ```bash
+# A22 > GAMERS
+auto eth0
+iface eth0 inet static
+    address 10.74.18.2
+    netmask 255.255.255.128
+    gateway 10.74.18.1
 ```
 
 ### Okayu (32 Hosts)
 
 ```bash
+# A22 > GAMERS
+auto eth0
+iface eth0 inet static
+    address 10.74.18.53
+    netmask 255.255.255.128
+    gateway 10.74.18.1
 ```
 
 ### Mio (36 Hosts)
 
 ```bash
+# A22 > GAMERS
+auto eth0
+iface eth0 inet static
+    address 10.74.18.85
+    netmask 255.255.255.128
+    gateway 10.74.18.1
 ```
 
 ## Routing
 
+### Hololive
 
+```bash
+```
+
+### Hololive > EN (Left)
+
+**HoloEN**
+
+```bash
+```
+
+**HoloAdvent**
+
+```bash
+```
+
+**Holo-Myth**
+
+```bash
+```
+
+**Project-Hope**
+
+```bash
+```
+
+**Holo-Council**
+
+```bash
+```
+
+### Hololive > ID (Right)
+
+**Holo-ID**
+
+```bash
+```
+
+**AREA15**
+
+```bash
+```
+
+**holoro**
+
+```bash
+```
+
+**holoh3ro**
+
+```bash
+```
+
+### Hololive > JP (Down)
+
+**HoloJP**
+
+```bash
+```
+
+**DEV_IS**
+
+```bash
+```
+
+**GEN:0**
+
+```bash
+```
+
+**GEN:1**
+
+```bash
+```
+
+**GAMERS**
+
+```bash
+```
 
 ## Testing
 
-
+...
 
 # CIDR
 
