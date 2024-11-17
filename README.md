@@ -1005,7 +1005,7 @@ post-up route add -net 10.74.16.0 netmask 255.255.254.0 gw 10.74.19.98
 auto eth0
 iface eth0 inet static
     address 10.74.19.90
-    netmask 255.255.252.252
+    netmask 255.255.255.252
     gateway 10.74.19.89
 
 # A11 > Switch (Moona / Risu / Iofi)
