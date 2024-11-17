@@ -819,29 +819,29 @@ iface eth3 inet static
     netmask 255.255.255.252
 
 # LEFT
-post-up route add -net 10.74.19.84 netmask 255.255.255.252 gw 10.74.19.82 # A9
-post-up route add -net 10.74.19.0 netmask 255.255.255.224 gw 10.74.19.82 # A8
-post-up route add -net 10.74.19.88 netmask 255.255.255.252 gw 10.74.19.82 # A10
-post-up route add -net 10.74.12.0 netmask 255.255.254.0 gw 10.74.19.82 # A3
-post-up route add -net 10.74.19.48 netmask 255.255.255.248 gw 10.74.19.82 # A4
-post-up route add -net 10.74.19.56 netmask 255.255.255.248 gw 10.74.19.82 # A5
-post-up route add -net 10.74.18.128 netmask 255.255.255.192 gw 10.74.19.82 # A6
+post-up route add -net 10.74.19.80 netmask 255.255.255.252 gw 10.74.19.74 
+post-up route add -net 10.74.19.0 netmask 255.255.255.224 gw 10.74.19.74 
+post-up route add -net 10.74.19.76 netmask 255.255.255.252 gw 10.74.19.74 
+post-up route add -net 10.74.12.0 netmask 255.255.254.0 gw 10.74.19.74 
+post-up route add -net 10.74.19.48 netmask 255.255.255.248 gw 10.74.19.74 
+post-up route add -net 10.74.19.56 netmask 255.255.255.248 gw 10.74.19.74 
+post-up route add -net 10.74.18.128 netmask 255.255.255.192 gw 10.74.19.74 
 
 # RIGHT
-post-up route add -net 10.74.19.92 netmask 255.255.255.252 gw 10.74.19.74 # A12
-post-up route add -net 10.74.8.0 netmask 255.255.252.0 gw 10.74.19.74 # A11
-post-up route add -net 10.74.19.96 netmask 255.255.255.252 gw 10.74.19.74 # A14
-post-up route add -net 10.74.18.192 netmask 255.255.255.192 gw 10.74.19.74 # A13
-post-up route add -net 10.74.19.100 netmask 255.255.255.252 gw 10.74.19.74 # A16
-post-up route add -net 10.74.16.0 netmask 255.255.254.0 gw 10.74.19.74 # A20
+post-up route add -net 10.74.19.88 netmask 255.255.255.252 gw 10.74.19.86 
+post-up route add -net 10.74.8.0 netmask 255.255.252.0 gw 10.74.19.86 
+post-up route add -net 10.74.19.92 netmask 255.255.255.252 gw 10.74.19.86 
+post-up route add -net 10.74.18.192 netmask 255.255.255.192 gw 10.74.19.86
+post-up route add -net 10.74.19.96 netmask 255.255.255.252 gw 10.74.19.86
+post-up route add -net 10.74.16.0 netmask 255.255.254.0 gw 10.74.19.86
 
 # DOWN
-post-up route add -net 10.74.19.64 netmask 255.255.255.248 gw 10.74.19.106 # A17
-post-up route add -net 10.74.19.32 netmask 255.255.255.240 gw 10.74.19.106 # A18
-post-up route add -net 10.74.0.0 netmask 255.255.248.0 gw 10.74.19.106 # A19
-post-up route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.19.106 # A15
-post-up route add -net 10.74.19.76 netmask 255.255.255.252 gw 10.74.19.106 # A2
-post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.106 # A22
+post-up route add -net 10.74.19.64 netmask 255.255.255.248 gw 10.74.19.102 
+post-up route add -net 10.74.19.32 netmask 255.255.255.240 gw 10.74.19.102 
+post-up route add -net 10.74.0.0 netmask 255.255.248.0 gw 10.74.19.102 
+post-up route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.19.102 
+post-up route add -net 10.74.19.104 netmask 255.255.255.252 gw 10.74.19.102 
+post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.102
 ```
 
 ### Hololive > EN (Left)
@@ -868,12 +868,12 @@ iface eth2 inet static
     address 10.74.19.81
     netmask 255.255.255.252
 
-post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.81
-post-up route add -net 10.74.19.0 netmask 255.255.255.224 gw 10.74.19.86 # A8
-post-up route add -net 10.74.12.0 netmask 255.255.254.0 gw 10.74.19.90 # A3
-post-up route add -net 10.74.19.48 netmask 255.255.255.248 gw 10.74.19.90 # A4
-post-up route add -net 10.74.19.56 netmask 255.255.255.248 gw 10.74.19.90 # A5
-post-up route add -net 10.74.18.128 netmask 255.255.255.192 gw 10.74.19.90 # A6
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.73
+post-up route add -net 10.74.19.0 netmask 255.255.255.224 gw 10.74.19.82 
+post-up route add -net 10.74.12.0 netmask 255.255.254.0 gw 10.74.19.78 
+post-up route add -net 10.74.19.48 netmask 255.255.255.248 gw 10.74.19.78 
+post-up route add -net 10.74.19.56 netmask 255.255.255.248 gw 10.74.19.78
+post-up route add -net 10.74.18.128 netmask 255.255.255.192 gw 10.74.19.78 
 ```
 
 **HoloAdvent**
@@ -892,7 +892,7 @@ iface eth1 inet static
     address 10.74.19.1
     netmask 255.255.255.224
 
-post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.85
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.81
 ```
 
 **Holo-Myth**
@@ -917,9 +917,9 @@ iface eth2 inet static
     address 10.74.19.49
     netmask 255.255.255.248
 
-post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.89
-post-up route add -net 10.74.19.56 netmask 255.255.255.248 gw 10.74.19.50 # A5
-post-up route add -net 10.74.18.128 netmask 255.255.255.192 gw 10.74.19.51 # A6
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.77
+post-up route add -net 10.74.19.56 netmask 255.255.255.248 gw 10.74.19.50 
+post-up route add -net 10.74.18.128 netmask 255.255.255.192 gw 10.74.19.51 
 ```
 
 **Project-Hope**
@@ -939,7 +939,7 @@ iface eth1 inet static
     netmask 255.255.255.248
 
 post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.49
-post-up route add -net 10.74.18.128 netmask 255.255.255.192 gw 10.74.19.51 # A6
+post-up route add -net 10.74.18.128 netmask 255.255.255.192 gw 10.74.19.51 
 ```
 
 **Holo-Council**
@@ -959,7 +959,7 @@ iface eth1 inet static
     netmask 255.255.255.192
 
 post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.49
-post-up route add -net 10.74.19.56 netmask 255.255.255.248 gw 10.74.19.50 # A5
+post-up route add -net 10.74.19.56 netmask 255.255.255.248 gw 10.74.19.50 
 ```
 
 ### Hololive > ID (Right)
@@ -992,10 +992,10 @@ iface eth3 inet static
     address 10.74.19.97
     netmask 255.255.255.252
 
-post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.73 
-post-up route add -net 10.74.8.0 netmask 255.255.252.0 gw 10.74.19.94 # A11
-post-up route add -net 10.74.18.192 netmask 255.255.255.192 gw 10.74.19.98 # A13
-post-up route add -net 10.74.16.0 netmask 255.255.254.0 gw 10.74.19.102 # A20
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.85 
+post-up route add -net 10.74.8.0 netmask 255.255.252.0 gw 10.74.19.90
+post-up route add -net 10.74.18.192 netmask 255.255.255.192 gw 10.74.19.94 
+post-up route add -net 10.74.16.0 netmask 255.255.254.0 gw 10.74.19.98 
 ```
 
 **AREA15**
@@ -1014,7 +1014,7 @@ iface eth1 inet static
     address 10.74.8.1
     netmask 255.255.252.0
 
-post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.93
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.89
 ```
 
 **holoro**
@@ -1033,7 +1033,7 @@ iface eth1 inet static
     address 10.74.18.192
     netmask 255.255.255.192
 
-post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.97
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.93
 ```
 
 **holoh3ro**
@@ -1052,7 +1052,7 @@ iface eth1 inet static
     address 10.74.14.1
     netmask 255.255.254.0
 
-post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.101
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.97
 ```
 
 ### Hololive > JP (Down)
@@ -1073,12 +1073,12 @@ iface eth1 inet static
     address 10.74.19.65
     netmask 255.255.255.248
 
-post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.105
-post-up route add -net 10.74.19.32 netmask 255.255.255.240 gw 10.74.19.66 # A18
-post-up route add -net 10.74.0.0 netmask 255.255.248.0 gw 10.74.19.67 # A19
-post-up route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.19.67 # A15
-post-up route add -net 10.74.19.76 netmask 255.255.255.252 gw 10.74.19.67 # A2
-post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.67 # A22
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.101
+post-up route add -net 10.74.19.32 netmask 255.255.255.240 gw 10.74.19.66 
+post-up route add -net 10.74.0.0 netmask 255.255.248.0 gw 10.74.19.67 
+post-up route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.19.67 
+post-up route add -net 10.74.19.104 netmask 255.255.255.252 gw 10.74.19.67
+post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.67 
 ```
 
 **DEV_IS**
@@ -1098,10 +1098,10 @@ iface eth1 inet static
     netmask 255.255.255.240
 
 post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.65 
-post-up route add -net 10.74.0.0 netmask 255.255.248.0 gw 10.74.19.67 # A19
-post-up route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.19.67 # A15
-post-up route add -net 10.74.19.76 netmask 255.255.255.252 gw 10.74.19.67 # A2
-post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.67 # A22
+post-up route add -net 10.74.0.0 netmask 255.255.248.0 gw 10.74.19.67 
+post-up route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.19.67 
+post-up route add -net 10.74.19.104 netmask 255.255.255.252 gw 10.74.19.67
+post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.67 
 ```
 
 **GEN:0**
@@ -1121,10 +1121,10 @@ iface eth1 inet static
     netmask 255.255.248.0
 
 post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.65 
-post-up route add -net 10.74.19.32 netmask 255.255.255.240 gw 10.74.19.66 # A18
-post-up route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.0.2 # A15
-post-up route add -net 10.74.19.76 netmask 255.255.255.252 gw 10.74.0.2 # A2
-post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.0.2 # A22
+post-up route add -net 10.74.19.32 netmask 255.255.255.240 gw 10.74.19.66 
+post-up route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.0.2 
+post-up route add -net 10.74.19.104 netmask 255.255.255.252 gw 10.74.0.2 
+post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.0.2 
 ```
 
 **GEN:1**
@@ -1150,7 +1150,7 @@ iface eth2 inet static
     netmask 255.255.255.252
 
 post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.0.1
-post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.78 # A22
+post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.106 
 ```
 
 **GAMERS**
@@ -1169,7 +1169,7 @@ iface eth1 inet static
     address 10.74.18.1
     netmask 255.255.255.128
     
-post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.77
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.105
 ```
 
 ## Testing
