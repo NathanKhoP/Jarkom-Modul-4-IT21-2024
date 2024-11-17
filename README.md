@@ -794,30 +794,54 @@ iface eth0 inet static
 ### Hololive
 
 ```bash
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+
+# A1 > HoloEN
+auto eth1
+iface eth1 inet static
+    address 10.74.19.73
+    netmask 255.255.255.252
+
+# A9 > HoloID
+auto eth2
+iface eth2 inet static
+    address 10.74.19.85
+    netmask 255.255.255.252
+
+# A16 > Holo-JP
+auto eth3
+iface eth3 inet static
+    address 10.74.19.101
+    netmask 255.255.255.252
+
 # LEFT
-route add -net 10.74.19.84 netmask 255.255.255.252 gw 10.74.19.82 # A9
-route add -net 10.74.19.0 netmask 255.255.255.224 gw 10.74.19.82 # A8
-route add -net 10.74.19.88 netmask 255.255.255.252 gw 10.74.19.82 # A10
-route add -net 10.74.12.0 netmask 255.255.254.0 gw 10.74.19.82 # A3
-route add -net 10.74.19.48 netmask 255.255.255.248 gw 10.74.19.82 # A4
-route add -net 10.74.19.56 netmask 255.255.255.248 gw 10.74.19.82 # A5
-route add -net 10.74.18.128 netmask 255.255.255.192 gw 10.74.19.82 # A6
+post-up route add -net 10.74.19.84 netmask 255.255.255.252 gw 10.74.19.82 # A9
+post-up route add -net 10.74.19.0 netmask 255.255.255.224 gw 10.74.19.82 # A8
+post-up route add -net 10.74.19.88 netmask 255.255.255.252 gw 10.74.19.82 # A10
+post-up route add -net 10.74.12.0 netmask 255.255.254.0 gw 10.74.19.82 # A3
+post-up route add -net 10.74.19.48 netmask 255.255.255.248 gw 10.74.19.82 # A4
+post-up route add -net 10.74.19.56 netmask 255.255.255.248 gw 10.74.19.82 # A5
+post-up route add -net 10.74.18.128 netmask 255.255.255.192 gw 10.74.19.82 # A6
 
 # RIGHT
-route add -net 10.74.19.92 netmask 255.255.255.252 gw 10.74.19.74 # A12
-route add -net 10.74.8.0 netmask 255.255.252.0 gw 10.74.19.74 # A11
-route add -net 10.74.19.96 netmask 255.255.255.252 gw 10.74.19.74 # A14
-route add -net 10.74.18.192 netmask 255.255.255.192 gw 10.74.19.74 # A13
-route add -net 10.74.19.100 netmask 255.255.255.252 gw 10.74.19.74 # A16
-route add -net 10.74.16.0 netmask 255.255.254.0 gw 10.74.19.74 # A20
+post-up route add -net 10.74.19.92 netmask 255.255.255.252 gw 10.74.19.74 # A12
+post-up route add -net 10.74.8.0 netmask 255.255.252.0 gw 10.74.19.74 # A11
+post-up route add -net 10.74.19.96 netmask 255.255.255.252 gw 10.74.19.74 # A14
+post-up route add -net 10.74.18.192 netmask 255.255.255.192 gw 10.74.19.74 # A13
+post-up route add -net 10.74.19.100 netmask 255.255.255.252 gw 10.74.19.74 # A16
+post-up route add -net 10.74.16.0 netmask 255.255.254.0 gw 10.74.19.74 # A20
 
 # DOWN
-route add -net 10.74.19.64 netmask 255.255.255.248 gw 10.74.19.106 # A17
-route add -net 10.74.19.32 netmask 255.255.255.240 gw 10.74.19.106 # A18
-route add -net 10.74.0.0 netmask 255.255.248.0 gw 10.74.19.106 # A19
-route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.19.106 # A15
-route add -net 10.74.19.76 netmask 255.255.255.252 gw 10.74.19.106 # A2
-route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.106 # A22
+post-up route add -net 10.74.19.64 netmask 255.255.255.248 gw 10.74.19.106 # A17
+post-up route add -net 10.74.19.32 netmask 255.255.255.240 gw 10.74.19.106 # A18
+post-up route add -net 10.74.0.0 netmask 255.255.248.0 gw 10.74.19.106 # A19
+post-up route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.19.106 # A15
+post-up route add -net 10.74.19.76 netmask 255.255.255.252 gw 10.74.19.106 # A2
+post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.106 # A22
 ```
 
 ### Hololive > EN (Left)
@@ -825,40 +849,117 @@ route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.106 # A22
 **HoloEN**
 
 ```bash
-route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.81
-route add -net 10.74.19.0 netmask 255.255.255.224 gw 10.74.19.86 # A8
-route add -net 10.74.12.0 netmask 255.255.254.0 gw 10.74.19.90 # A3
-route add -net 10.74.19.48 netmask 255.255.255.248 gw 10.74.19.90 # A4
-route add -net 10.74.19.56 netmask 255.255.255.248 gw 10.74.19.90 # A5
-route add -net 10.74.18.128 netmask 255.255.255.192 gw 10.74.19.90 # A6
+# A1 > Hololive
+auto eth0
+iface eth0 inet static
+    address 10.74.19.74
+    netmask 255.255.255.252
+    gateway 10.74.19.73
+
+# A2 > Holo-Myth
+auto eth1
+iface eth1 inet static
+    address 10.74.19.77
+    netmask 255.255.255.252
+
+# A7 > HoloAdvent
+auto eth2
+iface eth2 inet static
+    address 10.74.19.81
+    netmask 255.255.255.252
+
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.81
+post-up route add -net 10.74.19.0 netmask 255.255.255.224 gw 10.74.19.86 # A8
+post-up route add -net 10.74.12.0 netmask 255.255.254.0 gw 10.74.19.90 # A3
+post-up route add -net 10.74.19.48 netmask 255.255.255.248 gw 10.74.19.90 # A4
+post-up route add -net 10.74.19.56 netmask 255.255.255.248 gw 10.74.19.90 # A5
+post-up route add -net 10.74.18.128 netmask 255.255.255.192 gw 10.74.19.90 # A6
 ```
 
 **HoloAdvent**
 
 ```bash
-route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.85
+# A7 > Holo-EN
+auto eth0
+iface eth0 inet static
+    address 10.74.19.82
+    netmask 255.255.255.252
+    gateway 10.74.19.81
+
+# A8 > Switch (FuwaMoco/Shiori/Biboo)
+auto eth1
+iface eth1 inet static
+    address 10.74.19.1
+    netmask 255.255.255.224
+
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.85
 ```
 
 **Holo-Myth**
 
 ```bash
-route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.89
-route add -net 10.74.19.56 netmask 255.255.255.248 gw 10.74.19.50 # A5
-route add -net 10.74.18.128 netmask 255.255.255.192 gw 10.74.19.51 # A6
+# A2 > Holo-EN
+auto eth0
+iface eth0 inet static
+    address 10.74.19.78
+    netmask 255.255.255.252
+    gateway 10.74.19.77
+
+# A3 > Switch (Gura/Kiara)
+auto eth1
+iface eth1 inet static
+    address 10.74.12.1
+    netmask 255.255.254.0
+
+# A4 > HoloPromise > Project-Hope/Holo-Council
+auto eth2
+iface eth2 inet static
+    address 10.74.19.49
+    netmask 255.255.255.248
+
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.89
+post-up route add -net 10.74.19.56 netmask 255.255.255.248 gw 10.74.19.50 # A5
+post-up route add -net 10.74.18.128 netmask 255.255.255.192 gw 10.74.19.51 # A6
 ```
 
 **Project-Hope**
 
 ```bash
-route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.49
-route add -net 10.74.18.128 netmask 255.255.255.192 gw 10.74.19.51 # A6
+# A4 > Holo-Myth
+auto eth0
+iface eth0 inet static
+    address 10.74.19.50
+    netmask 255.255.255.248
+    gateway 10.74.19.49
+
+# A5 > Irys
+auto eth1
+iface eth1 inet static
+    address 10.74.19.57
+    netmask 255.255.255.248
+
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.49
+post-up route add -net 10.74.18.128 netmask 255.255.255.192 gw 10.74.19.51 # A6
 ```
 
 **Holo-Council**
 
 ```bash
-route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.49
-route add -net 10.74.19.56 netmask 255.255.255.248 gw 10.74.19.50 # A5
+# A4 > Holo-Myth
+auto eth0
+iface eth0 inet static
+    address 10.74.19.51
+    netmask 255.255.255.248
+    gateway 10.74.19.49
+
+# A6 > Switch
+auto eth1
+iface eth1 inet static
+    address 10.74.18.128
+    netmask 255.255.255.192
+
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.49
+post-up route add -net 10.74.19.56 netmask 255.255.255.248 gw 10.74.19.50 # A5
 ```
 
 ### Hololive > ID (Right)
@@ -866,28 +967,92 @@ route add -net 10.74.19.56 netmask 255.255.255.248 gw 10.74.19.50 # A5
 **Holo-ID**
 
 ```bash
-route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.73 
-route add -net 10.74.8.0 netmask 255.255.252.0 gw 10.74.19.94 # A11
-route add -net 10.74.18.192 netmask 255.255.255.192 gw 10.74.19.98 # A13
-route add -net 10.74.16.0 netmask 255.255.254.0 gw 10.74.19.102 # A20
+# A9 > Hololive
+auto eth0
+iface eth0 inet static
+    address 10.74.19.86
+    netmask 255.255.255.252
+    gateway 10.74.19.85
+
+# A10 > Area15
+auto eth1
+iface eth1 inet static
+    address 10.74.19.89
+    netmask 255.255.255.252
+
+# A12 > holoro
+auto eth2
+iface eth2 inet static
+    address 10.74.19.93
+    netmask 255.255.255.252
+
+# A14 > holoh3ro
+auto eth3
+iface eth3 inet static
+    address 10.74.19.97
+    netmask 255.255.255.252
+
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.73 
+post-up route add -net 10.74.8.0 netmask 255.255.252.0 gw 10.74.19.94 # A11
+post-up route add -net 10.74.18.192 netmask 255.255.255.192 gw 10.74.19.98 # A13
+post-up route add -net 10.74.16.0 netmask 255.255.254.0 gw 10.74.19.102 # A20
 ```
 
 **AREA15**
 
 ```bash
-route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.93
+# A10 > Holo-ID
+auto eth0
+iface eth0 inet static
+    address 10.74.19.90
+    netmask 255.255.252.252
+    gateway 10.74.19.89
+
+# A11 > Switch (Moona / Risu / Iofi)
+auto eth1
+iface eth1 inet static
+    address 10.74.8.1
+    netmask 255.255.252.0
+
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.93
 ```
 
 **holoro**
 
 ```bash
-route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.97
+# A12 > HoloID
+auto eth0
+iface eth0 inet static
+    address 10.74.19.94
+    netmask 255.255.255.252
+    gateway 10.74.19.93
+
+# A13 > Switch (Ollie/Anya/Reine)
+auto eth1
+iface eth1 inet static
+    address 10.74.18.192
+    netmask 255.255.255.192
+
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.97
 ```
 
 **holoh3ro**
 
 ```bash
-route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.101
+# A14 > HoloID
+auto eth0
+iface eth0 inet static
+    address 10.74.19.98
+    netmask 255.255.255.252
+    gateway 10.74.19.97
+
+# A15 > Switch (Zeta/Kaela/Kobo)
+auto eth1
+iface eth1 inet static
+    address 10.74.14.1
+    netmask 255.255.254.0
+
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.101
 ```
 
 ### Hololive > JP (Down)
@@ -895,45 +1060,116 @@ route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.101
 **HoloJP**
 
 ```bash
-route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.105
-route add -net 10.74.19.32 netmask 255.255.255.240 gw 10.74.19.66 # A18
-route add -net 10.74.0.0 netmask 255.255.248.0 gw 10.74.19.67 # A19
-route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.19.67 # A15
-route add -net 10.74.19.76 netmask 255.255.255.252 gw 10.74.19.67 # A2
-route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.67 # A22
+# A16 > Hololive
+auto eth0
+iface eth0 inet static
+    address 10.74.19.102
+    netmask 255.255.255.252
+    gateway 10.74.19.101
+
+# A17 > Switch > DEV:IS / GEN:0
+auto eth1
+iface eth1 inet static
+    address 10.74.19.65
+    netmask 255.255.255.248
+
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.105
+post-up route add -net 10.74.19.32 netmask 255.255.255.240 gw 10.74.19.66 # A18
+post-up route add -net 10.74.0.0 netmask 255.255.248.0 gw 10.74.19.67 # A19
+post-up route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.19.67 # A15
+post-up route add -net 10.74.19.76 netmask 255.255.255.252 gw 10.74.19.67 # A2
+post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.67 # A22
 ```
 
 **DEV_IS**
 
 ```bash
-route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.65 
-route add -net 10.74.0.0 netmask 255.255.248.0 gw 10.74.19.67 # A19
-route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.19.67 # A15
-route add -net 10.74.19.76 netmask 255.255.255.252 gw 10.74.19.67 # A2
-route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.67 # A22
+# A17 > Holo-JP
+auto eth0
+iface eth0 inet static
+    address 10.74.19.66
+    netmask 255.255.255.248
+    gateway 10.74.19.65
+
+# A18 > Re:GLOSS
+auto eth1
+iface eth1 inet static
+    address 10.74.19.33
+    netmask 255.255.255.240
+
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.65 
+post-up route add -net 10.74.0.0 netmask 255.255.248.0 gw 10.74.19.67 # A19
+post-up route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.19.67 # A15
+post-up route add -net 10.74.19.76 netmask 255.255.255.252 gw 10.74.19.67 # A2
+post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.67 # A22
 ```
 
 **GEN:0**
 
 ```bash
-route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.65 
-route add -net 10.74.19.32 netmask 255.255.255.240 gw 10.74.19.66 # A18
-route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.0.2 # A15
-route add -net 10.74.19.76 netmask 255.255.255.252 gw 10.74.0.2 # A2
-route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.0.2 # A22
+# A17 > Holo-JP
+auto eth0
+iface eth0 inet static
+    address 10.74.19.67
+    netmask 255.255.255.248
+    gateway 10.74.19.65
+
+# A19 > Switch > MiComet / AZKi / GEN:1
+auto eth1
+iface eth1 inet static
+    address 10.74.0.1
+    netmask 255.255.248.0
+
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.65 
+post-up route add -net 10.74.19.32 netmask 255.255.255.240 gw 10.74.19.66 # A18
+post-up route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.0.2 # A15
+post-up route add -net 10.74.19.76 netmask 255.255.255.252 gw 10.74.0.2 # A2
+post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.0.2 # A22
 ```
 
 **GEN:1**
 
 ```bash
-route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.0.1
-route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.78 # A22
+# A19 > GEN:0
+auto eth0
+iface eth0 inet static
+    address 10.74.0.2
+    netmask 255.255.248.0
+    gateway 10.74.0.1
+
+# A20 > FBK / Aki
+auto eth1
+iface eth1 inet static
+    address 10.74.16.1
+    netmask 255.255.254.0
+
+# A21 > GAMERS
+auto eth2
+iface eth2 inet static
+    address 10.74.19.105
+    netmask 255.255.255.252
+
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.0.1
+post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.78 # A22
 ```
 
 **GAMERS**
 
 ```bash
-route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.77
+# A21 > GEN:1
+auto eth0
+iface eth0 inet static
+    address 10.74.19.106
+    netmask 255.255.255.252
+    gateway 10.74.19.105
+
+# A22 > Korone / Okayu / Mio
+auto eth1
+iface eth1 inet static
+    address 10.74.18.1
+    netmask 255.255.255.128
+    
+post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.77
 ```
 
 ## Testing
