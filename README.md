@@ -1181,12 +1181,16 @@ post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.105
 ## Penggabungan IP
 
 ![alt text](assets/CIDRdiv.png)
+![alt text](assets/PenggabunganSubnet1.png)
+![alt text](assets/PenggabunganSubnet2.png)
 
 ## CIDR Tree
 
 ![alt text](assets/CIDRtree.png)
 
 ## Pembagian IP
+
+![alt text](assets/PembagianIP.png)
 
 ## Konfigurasi
 
