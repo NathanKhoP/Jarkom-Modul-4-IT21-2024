@@ -833,13 +833,13 @@ post-up route add -net 10.74.8.0 netmask 255.255.252.0 gw 10.74.19.86
 post-up route add -net 10.74.19.92 netmask 255.255.255.252 gw 10.74.19.86 
 post-up route add -net 10.74.18.192 netmask 255.255.255.192 gw 10.74.19.86
 post-up route add -net 10.74.19.96 netmask 255.255.255.252 gw 10.74.19.86
-post-up route add -net 10.74.16.0 netmask 255.255.254.0 gw 10.74.19.86
+post-up route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.19.86
 
 # DOWN
 post-up route add -net 10.74.19.64 netmask 255.255.255.248 gw 10.74.19.102 
 post-up route add -net 10.74.19.32 netmask 255.255.255.240 gw 10.74.19.102 
 post-up route add -net 10.74.0.0 netmask 255.255.248.0 gw 10.74.19.102 
-post-up route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.19.102 
+post-up route add -net 10.74.16.0 netmask 255.255.254.0 gw 10.74.19.102 
 post-up route add -net 10.74.19.104 netmask 255.255.255.252 gw 10.74.19.102 
 post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.102
 ```
@@ -995,7 +995,7 @@ iface eth3 inet static
 post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.85 
 post-up route add -net 10.74.8.0 netmask 255.255.252.0 gw 10.74.19.90
 post-up route add -net 10.74.18.192 netmask 255.255.255.192 gw 10.74.19.94 
-post-up route add -net 10.74.16.0 netmask 255.255.254.0 gw 10.74.19.98 
+post-up route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.19.98 
 ```
 
 **AREA15**
@@ -1076,7 +1076,7 @@ iface eth1 inet static
 post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.101
 post-up route add -net 10.74.19.32 netmask 255.255.255.240 gw 10.74.19.66 
 post-up route add -net 10.74.0.0 netmask 255.255.248.0 gw 10.74.19.67 
-post-up route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.19.67 
+post-up route add -net 10.74.16.0 netmask 255.255.254.0 gw 10.74.19.67 
 post-up route add -net 10.74.19.104 netmask 255.255.255.252 gw 10.74.19.67
 post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.67 
 ```
@@ -1099,7 +1099,7 @@ iface eth1 inet static
 
 post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.65 
 post-up route add -net 10.74.0.0 netmask 255.255.248.0 gw 10.74.19.67 
-post-up route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.19.67 
+post-up route add -net 10.74.16.0 netmask 255.255.254.0 gw 10.74.19.67 
 post-up route add -net 10.74.19.104 netmask 255.255.255.252 gw 10.74.19.67
 post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.19.67 
 ```
@@ -1122,7 +1122,7 @@ iface eth1 inet static
 
 post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.65 
 post-up route add -net 10.74.19.32 netmask 255.255.255.240 gw 10.74.19.66 
-post-up route add -net 10.74.14.0 netmask 255.255.254.0 gw 10.74.0.2 
+post-up route add -net 10.74.16.0 netmask 255.255.254.0 gw 10.74.0.2 
 post-up route add -net 10.74.19.104 netmask 255.255.255.252 gw 10.74.0.2 
 post-up route add -net 10.74.18.0 netmask 255.255.255.128 gw 10.74.0.2 
 ```
