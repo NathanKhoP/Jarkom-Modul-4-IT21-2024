@@ -333,7 +333,7 @@ iface eth0 inet static
 # A6 > Switch
 auto eth1
 iface eth1 inet static
-    address 10.74.18.128
+    address 10.74.18.129
     netmask 255.255.255.192
 ```
 
@@ -343,9 +343,9 @@ iface eth1 inet static
 # A6 > Holo-Council
 auto eth0
 iface eth0 inet static
-    address 10.74.18.129
+    address 10.74.18.130
     netmask 255.255.255.192
-    gateway 10.74.18.128
+    gateway 10.74.18.129
 ```
 
 ### Bae_Fauna (22 Hosts)
@@ -354,9 +354,9 @@ iface eth0 inet static
 # A6 > Holo-Council
 auto eth0
 iface eth0 inet static
-    address 10.74.18.168
+    address 10.74.18.169
     netmask 255.255.255.192
-    gateway 10.74.18.128
+    gateway 10.74.18.129
 ```
 
 ### HoloAdvent
