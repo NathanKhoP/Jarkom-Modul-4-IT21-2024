@@ -1197,6 +1197,11 @@ post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.105
 ### Hololive
 
 ```bash
+enable
+configure terminal
+interface fa0/0
+ip address 10.74.160.1 255.255.255.252
+no shutdown
 ```
 
 ### Holo-EN
@@ -1207,61 +1212,112 @@ post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.105
 ### Holo-Myth
 
 ```bash
+enable
+configure terminal
+interface fa0/0
+ip address 10.74.196.2 255.255.255.252
+no shutdown
 ```
 
 ### Gura_Ame_Ina (309 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.192.2
+Subnet Mask: 255.255.254.0
+Gateway: 10.74.192.1
 ```
 
 ### Kiara_Calli (193 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.192.3
+Subnet Mask: 255.255.254.0
+Gateway: 10.74.192.1
 ```
 
 ### Project-Hope
 
 ```bash
+enable
+configure terminal
+interface fa0/0
+ip address 10.74.194.130 255.255.255.248
+no shutdown
 ```
 
 ### Irys (2 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.194.66
+Subnet Mask: 255.255.255.248
+Gateway: 10.74.194.65
 ```
 
 ### Holo-Council
 
 ```bash
+enable
+configure terminal
+interface fa0/1
+ip address 10.74.194.1 255.255.255.192
+no shutdown
 ```
 
 ### Kronii-Mumei (39 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.194.2
+Subnet Mask: 255.255.255.192
+Gateway: 10.74.194.1
 ```
 
 ### Bae_Fauna (22 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.194.3
+Subnet Mask: 255.255.255.192
+Gateway: 10.74.194.1
 ```
 
 ### HoloAdvent
 
 ```bash
+enable
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.74.200.33
+do write
 ```
 
 ### FuwaMoco (5 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.200.2
+Subnet Mask: 255.255.224.0
+Gateway: 10.74.200.1
 ```
 
 ### Shiori_Nerissa (12 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.200.3
+Subnet Mask: 255.255.224.0
+Gateway: 10.74.200.1
 ```
 
 ### Biboo (10 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.200.4
+Subnet Mask: 255.255.224.0
+Gateway: 10.74.200.1
 ```
 
 ### HoloID
@@ -1272,71 +1328,144 @@ post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.105
 ### Area15
 
 ```bash
+enable
+configure terminal
+interface fa0/0
+ip address 10.74.192.2 255.255.255.252
+
+interface fa0/1
+ip address 10.74.128.1 255.255.252.0
+
+no shutdown
 ```
 
 ### Moona (201 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.128.3
+Subnet Mask: 255.255.252.0
+Gateway: 10.74.128.1
 ```
 
 ### Risu (319 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.128.2
+Subnet Mask: 255.255.252.0
+Gateway: 10.74.128.1
 ```
 
 ### Iofi (140 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.128.4
+Subnet Mask: 255.255.252.0
+Gateway: 10.74.128.1
 ```
 
 ### holoro
 
 ```bash
+enable
+configure terminal
+interface fa0/0
+ip address 10.74.136.66 255.255.255.252
+
+interface fa0/1
+ip address 10.74.136.1 255.255.255.192
+
+no shutdown
 ```
 
 ### Ollie (20 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.136.2
+Subnet Mask: 255.255.255.192
+Gateway: 10.74.136.1
 ```
 
 ### Anya (3 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.136.3
+Subnet Mask: 255.255.255.192
+Gateway: 10.74.136.1
 ```
 
 ### Reine (10 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.136.4
+Subnet Mask: 255.255.255.192
+Gateway: 10.74.136.1
 ```
 
 ### holoh3ro
 
 ```bash
+enable
+configure terminal
+interface fa0/0
+ip address 10.74.146.2 255.255.255.252
+
+interface fa0/1
+ip address 10.74.144.1 255.255.254.0
+
+no shutdown
 ```
 
 ### Zeta (81 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.144.2
+Subnet Mask: 255.255.254.0
+Gateway: 10.74.144.1
 ```
 
 ### Kaela (71 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.144.3
+Subnet Mask: 255.255.254.0
+Gateway: 10.74.144.1
 ```
 
 ### Kobo (146 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.144.4
+Subnet Mask: 255.255.254.0
+Gateway: 10.74.144.1
 ```
 
 ### Holo-JP
 
 ```bash
+enable
+configure terminal
+interface fa0/0
+ip address 10.74.64.2 255.255.255.252
+no shutdown
 ```
 
 ### DEV_IS
 
 ```bash
+enable
+configure terminal
+interface fa0/0
+ip address 10.74.32.2 255.255.255.248
+no shutdown
 ```
 
 ### Re:GLOSS
@@ -1347,66 +1476,122 @@ post-up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.74.19.105
 ### Ririka_Raden (3 Host)
 
 ```bash
+
 ```
 
 ### Ao (3 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.16.2
+Subnet Mask: 255.255.255.240
+Gateway: 10.74.16.1
 ```
 
 ### Hajime_Kanade (7 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.16.3
+Subnet Mask: 255.255.255.240
+Gateway: 10.74.16.1
 ```
 
 ### GEN:0
 
 ```bash
+enable
+configure terminal
+interface fa0/1
+ip address 10.74.0.1 255.255.248.0
+no shutdown
 ```
 
 ### MiComet (1501 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.0.2
+Subnet Mask: 255.255.248.0
+Gateway: 10.74.0.1
 ```
 
 ### Sora_Robo_AZKi (542 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.0.3
+Subnet Mask: 255.255.248.0
+Gateway: 10.74.0.1
 ```
 
 ### GEN:1
 
 ```bash
+enable
+configure terminal
+interface fa0/0
+ip address 10.74.0.4 255.255.248.0
+no shutdown
 ```
 
 ### FBK_Matsuri (321 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.8.2
+Subnet Mask: 255.255.254.0
+Gateway: 10.74.8.1
 ```
 
 ### Aki_Haachama (148 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.8.3
+Subnet Mask: 255.255.254.0
+Gateway: 10.74.8.1
 ```
 
 ### GAMERS
 
 ```bash
+enable
+configure terminal
+interface fa0/0
+ip address 10.74.10.130 255.255.255.252
+
+interface fa0/1
+ip address 10.74.10.1 255.255.255.128
+
+no shutdown
 ```
 
 ### Korone (51 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.10.2
+Subnet Mask: 255.255.255.128
+Gateway: 10.74.10.1
 ```
 
 ### Okayu (32 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.10.3
+Subnet Mask: 255.255.255.128
+Gateway: 10.74.10.1
 ```
 
 ### Mio (36 Hosts)
 
 ```bash
+Interface fa0
+IP Address: 10.74.10.4
+Subnet Mask: 255.255.255.128
+Gateway: 10.74.10.1
 ```
 
 ## Routing
